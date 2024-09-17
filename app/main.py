@@ -5,11 +5,6 @@ def format_linter_error(error: dict) -> dict:
         "message": error["text"],
         "name": error["code"],
         "source": "flake8"
-        if
-        len(error) > 0 and "line_number" in error.keys()
-        and "column_number" in error.keys()
-        and "text" in error.keys() and "code" in error.keys()
-        else {}
     }
 
 
